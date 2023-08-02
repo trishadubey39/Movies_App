@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16sp"
+    android:layout_margin="8sp"
+    app:cardBackgroundColor="@color/color_primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="16sp"
+            android:layout_margin="16sp"
+            app:layout_constraintDimensionRatio="2:3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_launcher_background"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:textSize="14sp"
+            tools:text="movie name"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/cv_image"
+            app:layout_constraintStart_toStartOf="@id/cv_image"
+            app:layout_constraintEnd_toEndOf="@id/cv_image"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2sp"
+            android:textSize="14sp"
+            tools:text="Genre"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_name"
+            app:layout_constraintStart_toStartOf="@id/cv_image"
+            app:layout_constraintEnd_toEndOf="@id/cv_image"/>
+
+        <RatingBar
+            android:id="@+id/tv_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2sp"
+            android:rating="3"
+            android:isIndicator="true"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintTop_toBottomOf="@id/tv_genre"
+            app:layout_constraintStart_toStartOf="@id/cv_image"
+            app:layout_constraintEnd_toEndOf="@id/cv_image"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
