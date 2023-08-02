@@ -2,6 +2,8 @@
 <resources>
     <color name="color_primary">#080808</color>
     <color name="color_secondary">#000000</color>
+    <color name="yellow">#FFDF00</color>
+    <color name="lightGrey">#7D7D7D</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
