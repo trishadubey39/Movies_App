@@ -1,7 +1,7 @@
-package com.example.movies.Network
+package com.example.movies.network
 
 import HttpRequestInterceptor
-import com.example.movies.MovieList.MoviesClient
+import com.example.movies.movieList.MoviesClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.example.movies.MovieList
+package com.example.movies.movieList
 
 data class MovieListModel(val id: Int,
                           val title: String,

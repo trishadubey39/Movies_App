@@ -1,6 +1,6 @@
-package com.example.movies.MovieList
+package com.example.movies.movieList
 
-import com.example.movies.Network.ApiService
+import com.example.movies.network.ApiService
 import retrofit2.Response
 import javax.inject.Inject
 
