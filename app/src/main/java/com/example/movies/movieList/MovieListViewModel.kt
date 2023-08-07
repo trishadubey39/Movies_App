@@ -23,9 +23,9 @@ class MovieListViewModel@Inject constructor(
     var toastMessage: String? by bindingProperty(null)
         private set
 
-    private val pokemonFetchingIndex: MutableStateFlow<Int> = MutableStateFlow(0)
-    private val pokemonListFlow = pokemonFetchingIndex.flatMapLatest { page ->
-        mainRepository.fetchPokemonList(
+    private val moviesFetchingIndex: MutableStateFlow<Int> = MutableStateFlow(0)
+    private val moviesListFlow = moviesFetchingIndex.flatMapLatest { page ->
+        mainRepository.fetchMovieList(
             page = page,
             onStart = { isLoading = true },
             onComplete = { isLoading = false },
@@ -34,16 +34,16 @@ class MovieListViewModel@Inject constructor(
     }
 
     @get:Bindable
-    val pokemonList: List<MovieListModel> by pokemonListFlow.asBindingProperty(viewModelScope, emptyList())
+    val moviesList: List<MovieListModel> by moviesListFlow.asBindingProperty(viewModelScope, emptyList())
 
     init {
         Timber.d("init MainViewModel")
     }
 
     @MainThread
-    fun fetchNextPokemonList() {
+    fun fetchNextmoviesList() {
         if (!isLoading) {
-            pokemonFetchingIndex.value++
+            moviesFetchingIndex.value++
         }
     }
 }
