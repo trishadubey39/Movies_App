@@ -69,4 +69,9 @@ dependencies {
 
     //Timber for logging
     implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    //bindables
+    dependencies {
+        implementation "com.github.skydoves:bindables:1.1.0"
+    }
 }
